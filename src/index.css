@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+.slider {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  @apply inline-block overflow-x-auto overflow-y-hidden w-full whitespace-nowrap bg-gray-600
+  px-6
+
+}
