@@ -14,15 +14,15 @@ export default function Slider({category_name}) {
     if (error) {
         return <div>Error: {error.message}</div>;
     }
-    console.log(products)
+
     return (
         <div className="w-full">
-            <div>
-                <p>
+            <div className="px-5">
+                <p className="font-medium text-2xl">
                     {category_name}
                 </p>
             </div>
-            <div className="px-6 bg-gray-600">
+            <div className="px-6">
                 <div className="slider">
                     {
                         products? products.map(product => <ProductCard product={product} />): 'Loading'

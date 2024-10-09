@@ -8,16 +8,18 @@ export default function ProductCard({product}) {
     }
     const imageUrl = product.images[0]
     return (
-        <div key={product.id} className="w- h-40 inline-block">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-            <img
-            
-            src={imageUrl}
-            className="h-full w-full object-cover object-center group-hover:opacity-75"
-            />
+        <div key={product.id} className="w-40 inline-block px-2 h-48">
+            <div className="rounded-xl w-full h-full py-2 px-3 flex flex-col items-center bg-[#0B192C]">
+                <div className="w-24 h-24 px-3">
+                    <img
+                    loading="lazy"
+                    src={imageUrl}
+                    className="w-full"
+                    />
+                </div>
+                <p className="bg-inherit text-xs text-white w-full text-wrap">{product.title}</p>
+                <p className="bg-inherit text-lg font-medium text-white w-full">{product.price + ' $'}</p>
             </div>
-            <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
-            <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
         </div>
     )
 }

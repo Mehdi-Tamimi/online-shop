@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: "Quicksand", sans-serif;
+}
 .slider {
   scrollbar-width: none;
   scroll-behavior: smooth;
-  @apply inline-block overflow-x-auto overflow-y-hidden w-full whitespace-nowrap bg-gray-600
-  px-6
+  @apply inline-block overflow-x-auto overflow-y-hidden w-full whitespace-nowrap
+  px-6 py-3 border-b-2 border-[#0B192C] mb-2 pb-6
 
+}
+
+.header-icons-container {
+  @apply w-8 h-8
 }
