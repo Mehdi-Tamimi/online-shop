@@ -31,7 +31,7 @@ export default function SlidersContainer() {
 
     return (
         <div className="pt-4">
-            {Categories.map(cat => <Slider category_name={cat}/>)}
+            {Categories.map((cat,index) => <Slider key={index} category_name={cat}/>)}
         </div>
     )
 

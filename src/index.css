@@ -10,6 +10,12 @@
   color: aliceblue;
   font-family: "Quicksand", sans-serif;
 }
+
+.main-container {
+  background-color: #75859C;
+  min-height: 100vh;
+  width: 100vw;
+}
 .slider {
   scrollbar-width: none;
   scroll-behavior: smooth;
