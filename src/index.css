@@ -27,3 +27,17 @@
 .header-icons-container {
   @apply w-8 h-8
 }
+
+th {
+  text-align: start;
+  background-color: #0B192C;
+  padding: 4px 8px;
+}
+tr {
+  border: 2px solid #0B192C;
+}
+td {
+  padding: 4px 8px;
+  border-left: 2px solid #0B192C;
+  border-right: 2px solid #0B192C;
+}
