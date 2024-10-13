@@ -1,5 +1,6 @@
 import useFetch from "../hooks/useFetch"
 import ProductCard from "./productCard"
+import SliderLoading from "./sliderLoading";
 
 
 export default function Slider({category_name}) {
@@ -7,9 +8,7 @@ export default function Slider({category_name}) {
 
     const [products, isLoading, error] = useFetch(category_name)
     if (isLoading) {
-        return <div>
-            Loading...
-        </div>
+        return <SliderLoading/>
     }
     if (error) {
         return <div>Error: {error.message}</div>;
@@ -25,7 +24,7 @@ export default function Slider({category_name}) {
             <div className="px-6">
                 <div className="slider">
                     {
-                        products? products.map(product => <ProductCard product={product} />): 'Loading'
+                        products? products.map(product => <ProductCard product={product} />): ''
                     }
 
                 </div>
