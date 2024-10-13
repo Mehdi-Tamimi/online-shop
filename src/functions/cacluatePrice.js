@@ -7,6 +7,6 @@ export default function calculatePrice(items) {
     for (const item in items) {
         total += items[item].count * items[item].price
     }
-    return total
+    return Math.floor(total*100)/100
 }
     

@@ -7,6 +7,7 @@ import SearchPage from './components/searchPage';
 import CartPage from './components/cartPage';
 import { Provider } from 'react-redux';
 import { store } from './cart/store';
+import FooterAnimation from './components/footerAnimation';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path='/search' element={<SearchPage/>}/>
             <Route path='/cart' element={<CartPage/>} />
           </Routes>
+          <FooterAnimation/>
         </BrowserRouter> 
       </Provider>
     </div>
