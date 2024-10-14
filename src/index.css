@@ -25,7 +25,7 @@
 }
 
 .header-icons-container {
-  @apply w-8 h-8
+  @apply w-8 h-8 cursor-pointer
 }
 
 th {
@@ -48,18 +48,19 @@ td {
 
 .walkingman {
   background-image: url('./assets/images/walkingman2.png');
-  width: 60px;
-  height: 100px;
-  background-size: 540px 100px;
+  width: 40px;
+  height: 70px;
+  background-size: 360px 70px;
   background-repeat: no-repeat;
   position: relative;
-  animation: walk infinite steps(9) 2s,move-forward infinite linear 10s;
+  animation: walk infinite steps(9) 2s,move-forward infinite linear 8s;
 }
 
 .walkingman::before {
   content: 'what do you want?';
   width: 120px;
   padding: 8px;
+  line-height: 120%;
   background-color: white;
   color: #0B192C;
   position: absolute;
@@ -67,13 +68,13 @@ td {
   top: -8px;
   transform: translateX(0) translateY(calc(-100% - 8px)) scale(0) ;
   border-radius: 16px;
-  transition: 1s transform;
-  transform-origin: 28px bottom;
+  transition: .5s transform;
+  transform-origin: 30px bottom;
 }
 
 .walkingman::after {
   
-  transition: 1s transform;
+  transition: 0.5s transform;
   content: '';
   position: absolute;
   top: -8px;
@@ -91,6 +92,41 @@ td {
   transform: translateX(28px) translateY(-8px) scale(1);
 }
 
+.cart-count {
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #014e81;
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  font-size: 8px;
+  text-align: center;
+  line-height: 16px;
+}
+
+@media only screen and (min-width: 680px) {
+  .walkingman {
+    width: 60px;
+    height: 100px;
+    line-height: 200%;
+    background-size: 540px 100px;
+    animation: walk2 infinite steps(9) 2s,move-forward infinite linear 10s;
+  }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+  .walkingman {
+    width: 80px;
+    height: 120px;
+ 
+    background-size: 720px 120px;
+    animation: walk3 infinite steps(9) 2s,move-forward infinite linear 12s;
+  }
+  
+}
 
 @keyframes rotate {
   0% {
@@ -106,10 +142,25 @@ td {
     background-position: 0;
   }
   to {
+    background-position: -360px;
+  }
+}
+@keyframes walk2 {
+  from {
+    background-position: 0;
+  }
+  to {
     background-position: -540px;
   }
 }
-
+@keyframes walk3 {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -720px;
+  }
+}
 @keyframes move-forward {
   from {
     transform: translateX(0);

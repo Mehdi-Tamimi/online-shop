@@ -8,7 +8,7 @@ export default function SliderLoading() {
             <div className='py-4'>
                 <img className='w-10 h-10 rotating' src={loadingIcon}/>
             </div>
-            <p className='text-2xl font-medium'>
+            <p className='text-2xl font-medium text-[#0B192C]'>
                 Loading...
             </p>
         </div>
